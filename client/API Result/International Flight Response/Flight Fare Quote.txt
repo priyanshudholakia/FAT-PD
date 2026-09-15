@@ -1,0 +1,31 @@
+{"status":"200","status_message":"OK","responseData":{"Response":{"Error":{"ErrorCode":0,"ErrorMessage":""},"FlightDetailChangeInfo":null,"IsPriceChanged":false,"ItineraryChangeList":[],"ResponseStatus":1,"Results":{"FareInclusions":[],"FirstNameFormat":"For
+Rest Country : Repeat the same last name\r\n<\ /br> For UAE Sector : If there is a space in the passenger's last name,
+    then split it (i.e., put the name before the space in the first name).\r\n<\ /br> If the passenger has a single-word
+        name in the last name so put father name will be the first name as per
+        passport","IsBookableIfSeatNotAvailable":true,"IsExclusiveFare":false,"IsFreeMealAvailable":false,"IsHoldAllowedWithSSR":false,"IsHoldMandatoryWithSSR":false,"LastNameFormat":"For
+        Rest Country : Repeat the same given name\r\n<\ /br> For UAE Sector : If there is a space in the passenger's
+            given name, then split it(i.e., put the name after the space in the last name).\r\n<\ /br> If the passenger
+                has a single-word name in the given name so put father name will be the last name as per
+                passport","ResultIndex":"OB120[TBO]imQRb4zGcyyyrCEch7s4849nIacMkxtZLuyGFUnMRsAzT67xCJLdLBVbjfQmH0zFO1dnzFWZNPkzqXVK0U2ptPr92xd4SMvLpQ\/ruMRIK288PD3n6yBokWiP63KSyIO\/mUTHQkcgD67t8
+                DURNxJy2pHoNefb3m0tyX4qWE0zdwHNcsKKugvZocHnEIs yeZ0P5uwsciiC4wMm0NJUiJjlRj0IbUcd7zrAU3Q6ny
+                v3mP3\/AIY\/uplhyP 7jyKyRdPM04ddoRQf6j5Ym\/nkbl6plXVaHTSGYXGnhLSVgp4yNty7kGEPyT3uKeqVvzl9cr xNpUHhC5Ti
+                h8vmS6q kdR 9D3Jk psAnRGhNRm8dCWZxyOoGxj4GvmFwbec7uITOJ5MFOAPZktQa8lkklgt7QzCEnhJ0FCLG\/5XWAX9OsLuX
+                iaDfwCk8AVhUiUgoHLTe73TeKbnSoGQTSEJsPtI03J6zIoH82N3o6lr7i\/E1j5cZ6SQ24qkvdSm
+                Y1T5agdxqoP7NR73EFIv9pSOfUjklUFyBkMhZjHZBxoZlSNTvQkbugqsb2W
+                TWXAgjmFlUO\/5l8rmSTeYPBed3qynm8ocQSgfv3qoFkY8ul3ToR\/efvQmWVhwwa9JFcFgtj4RZgAb2TaYzKavxLgZGRYnLRuPVkT5lqLIaCZiNmCf8DBsjbjBoy1KWhsI1QCwwZLsNW74CMRU86lTVZro\/ErXyfFkPZLV5Nu3XYn9FKOkwGkf\/xEzARKcFo4haxVssEwHMjrpsl337PVnplrccyyGl1sTXdUZihY6XxxfP1J0MLxo5IX3
+                q9Y\/KiXZLBn0w69
+                Y3Fyx9j32nPDcIDdjkXkD8eGdelG8IZNbsjoxxVI\/K6BBBrholviznRlcG4duBUA8qe2UvaapJnTc5GsMTTwfNjdNR\/StPNhbs9osjOn0kuMerHC1KYGbmJeshKqaP8b4hOGsYrWFLmm1tEAC3rNkvlFi5vdM41WoHvts
+                \/kuJrPkQlgPlEfklF xmYpmIJ Ig6hjXMau5nZu71Gb
+                xw==","Source":31,"IsLCC":true,"IsRefundable":true,"IsPanRequiredAtBook":false,"IsPanRequiredAtTicket":false,"IsPassportRequiredAtBook":true,"IsPassportRequiredAtTicket":true,"GSTAllowed":false,"IsCouponAppilcable":true,"IsGSTMandatory":false,"AirlineRemark":"Sg
+                sp
+                SGS.","IsPassportFullDetailRequiredAtBook":false,"ResultFareType":"RegularFare","Fare":{"CFARAmount":0,"DCFARAmount":0,"ServiceFeeDisplayType":0,"Currency":"INR","BaseFare":7898,"Tax":2512,"TaxBreakup":[{"key":"K3","value":460},{"key":"PSF","value":91},{"key":"UDF","value":54},{"key":"YR","value":100},{"key":"YQTax","value":1200},{"key":"OtherTaxes","value":607}],"YQTax":1200,"AdditionalTxnFeeOfrd":0,"AdditionalTxnFeePub":0,"PGCharge":0,"OtherCharges":59,"ChargeBU":[{"key":"TBOMARKUP","value":0},{"key":"GLOBALPROCUREMENTCHARGE","value":0},{"key":"CONVENIENCECHARGE","value":0},{"key":"OTHERCHARGE","value":59}],"Discount":0,"PublishedFare":10469,"CommissionEarned":0,"PLBEarned":0,"IncentiveEarned":0,"OfferedFare":10469,"TdsOnCommission":0,"TdsOnPLB":0,"TdsOnIncentive":0,"ServiceFee":0,"TotalBaggageCharges":0,"TotalMealCharges":0,"TotalSeatCharges":0,"TotalSpecialServiceCharges":0},"FareBreakdown":[{"CFARAmount":0,"DCFARAmount":0,"SegmentDetails":[{"CabinBaggage":{"FreeText":"7
+                KG","NoOfPiece":"1","Unit":"KG","Value":"7"},"CheckedInBaggage":{"FreeText":"30
+                KG","Unit":"KG","Value":"30"},"FlightInfoIndex":"1"}],"Currency":"INR","PassengerType":1,"PassengerCount":1,"BaseFare":7898,"Tax":2512,"TransactionFee":0,"YQTax":1200,"TaxBreakUp":[{"key":"PSF","value":91},{"key":"UDF","value":54},{"key":"YR","value":100},{"key":"YQTax","value":1200},{"key":"SGST","value":230},{"key":"CGST","value":230},{"key":"OtherTaxes","value":607}],"AdditionalTxnFeePub":0,"PGCharge":0,"AdditionalTxnFeeOfrd":0,"SupplierReissueCharges":0}],"Segments":[[{"Baggage":"30
+                KG","CabinBaggage":"7KG (7 KG X 1 pcs)","CabinClass":2,"SupplierFareClass":"SME
+                Fare","TripIndicator":1,"SegmentIndicator":1,"Airline":{"AirlineCode":"SG","AirlineName":"SpiceJet","FlightNumber":"11","FareClass":"SA","OperatingCarrier":""},"Origin":{"Airport":{"AirportCode":"DEL","AirportName":"Indira
+                Gandhi
+                Airport","Terminal":"3","CityCode":"DEL","CityName":"Delhi","CountryCode":"IN","CountryName":"India"},"DepTime":"2026-08-30T07:45:00"},"Destination":{"Airport":{"AirportCode":"DXB","AirportName":"Dubai","Terminal":"1","CityCode":"DXB","CityName":"Dubai","CountryCode":"AE","CountryName":"United
+                Arab
+                Emirates"},"ArrTime":"2026-08-30T10:10:00"},"Duration":235,"GroundTime":0,"Mile":0,"StopOver":false,"FlightInfoIndex":"1","StopPoint":"","StopPointArrivalTime":"0001-01-01T00:00:00","StopPointDepartureTime":"0001-01-01T00:00:00","Craft":"7M8","Remark":null,"IsETicketEligible":true,"FlightStatus":"Confirmed","Status":"","FareClassification":{"Color":"rgb(182,215,228)","Type":"SME
+                Fare"}}]],"LastTicketDate":"","TicketAdvisory":null,"FareRules":[{"Origin":"DEL","Destination":"DXB","Airline":"SG","FareBasisCode":"USME","FareRuleDetail":"","FareRestriction":"","FareFamilyCode":"","FareRuleIndex":""}],"AirlineCode":"SG","ValidatingAirline":"SG","FareClassification":{"Color":"rgb(182,215,228)","Type":"SME
+                Fare"}},"TraceId":"f6b14bba-9ed0-4adb-b722-10c6b0239d21"}}}

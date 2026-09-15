@@ -1,0 +1,56 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+}
+
+/* Ensure hand pointer cursor on all interactive/clickable elements globally */
+button,
+a,
+select,
+input[type="button"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"],
+[role="button"],
+.cursor-pointer,
+[onClick] {
+  cursor: pointer !important;
+}
+
+/* Infinite Horizontal Marquee animation for Testimonials */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom filter to match Figma primary red #FF2D1A exactly */
+.active-red-icon {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(5968%) hue-rotate(353deg) !important;
+}
+
+.shadow-mmt {
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15) !important;
+}

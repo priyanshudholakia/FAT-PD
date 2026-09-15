@@ -1,0 +1,5 @@
+{"status":"200","status_message":"OK","responseData":{"Response":{"Error":{"ErrorCode":0,"ErrorMessage":""},"FareRules":[{"Airline":"6E","DepartureTime":"2026-08-30T08:20:00","Destination":"BLR","FareBasisCode":"S0IP","FareInclusions":[],"FareRestriction":null,"FareRuleDetail":"The
+FareBasisCode is: S0IP<br \/>
+<br\ />
+<br\ />
+","FlightId":0,"MiniFareRules":{"Currency":null,"Rules":[]},"NonRefundable":false,"Origin":"DEL","ReturnDate":"0001-01-01T00:00:00"}],"ResponseStatus":1,"TraceId":"46f25de6-ae3d-4bdf-aec1-0e5ae049b015","NonRefundable":false}}}

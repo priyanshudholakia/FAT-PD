@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  FAILED
+  // Payment succeeded but the ticket outcome is inconclusive (provider
+  // timeout/network error mid-booking, or the server-side requirements gate
+  // rejected the payload after payment was already taken) — these need a
+  // human to reconcile with the provider/wallet rather than being silently
+  // shown as CONFIRMED or quietly dropped as FAILED.
+  MANUAL_REVIEW
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  name      String?
+  phone     String?
+  bookings  Booking[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Booking {
+  id              String        @id @default(uuid())
+  bookingId       String        @unique // Internal / Provider Booking ID
+  pnr             String?       // Airline PNR
+  traceId         String?       // Provider Search/Quote TraceId
+  type            String        @default("FLIGHT") // FLIGHT, HOTEL, PACKAGE
+  isLCC           Boolean       @default(true)
+  status          BookingStatus @default(CONFIRMED)
+  paymentStatus   PaymentStatus @default(COMPLETED)
+  paymentId       String?       // Razorpay payment ID
+
+  // Flight / Route details
+  airlineName     String?
+  airlineCode     String?
+  flightNumber    String?
+  origin          String
+  destination     String
+  departureTime   DateTime?
+  arrivalTime     DateTime?
+  cabinClass      String?       @default("Economy")
+
+  // Financials
+  basePrice       Float
+  taxes           Float
+  totalAmount     Float
+  currency        String        @default("INR")
+
+  // Associated User (Optional for guest checkout)
+  userId          String?
+  user            User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  // Structured Payload & Passengers Json
+  passengers      Json
+  addons          Json?
+  rawResponse     Json?
+
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}

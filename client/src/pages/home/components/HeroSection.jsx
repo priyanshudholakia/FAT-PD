@@ -613,7 +613,7 @@ export default function HeroSection() {
           </p>
 
           {/* Core Search Console Widget Card */}
-          <div className="bg-white/95 backdrop-blur-xs text-gray-900 rounded-2xl shadow-2xl p-6 max-w-xl border border-gray-200/50">
+          <div className="bg-white/95 backdrop-blur-xs text-gray-900 rounded-2xl shadow-2xl p-6 max-w-xl border border-gray-200/50 relative">
 
             {/* Search tabs selection header */}
             <div className="flex space-x-8 border-b border-gray-200 pb-1.5 mb-5 font-poppins relative">
@@ -832,7 +832,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Dates selection */}
-                <div className="relative" ref={calendarRef}>
+                <div ref={calendarRef}>
                   <div className="grid grid-cols-2 gap-3.5">
                     {/* Departure Box */}
                     <div
@@ -892,7 +892,7 @@ export default function HeroSection() {
                     </div>
                   </div>                  {/* Custom Large Fare Calendar Overlay (Single Month) */}
                   {isCalendarOpen && (
-                    <div className={`absolute top-full bg-white rounded-2xl shadow-2xl z-50 p-4 font-poppins w-[390px] select-none border border-[#EAEAEA] ${isCalendarOpen === "return" ? "right-0" : "left-0"}`}>
+                    <div className="absolute top-0 left-[calc(100%+20px)] bg-white rounded-2xl shadow-2xl z-50 p-4 font-poppins w-[390px] select-none border border-[#EAEAEA]">
 
                       {/* Calendar Header Nav */}
                       <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-gray-100">

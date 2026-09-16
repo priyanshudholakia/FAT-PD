@@ -62,7 +62,11 @@ function PassengerCard({ label, pax, onChange, req }) {
             <div className="relative">
               <select
                 value={pax.title}
-                onChange={(e) => set("title", e.target.value)}
+                onChange={(e) => {
+                  const newTitle = e.target.value;
+                  const newGender = ["Mrs", "Ms", "Miss"].includes(newTitle) ? "Female" : "Male";
+                  onChange({ ...pax, title: newTitle, gender: newGender });
+                }}
                 className="w-full h-[44px] bg-white border border-[#CBD5E1] rounded-lg pl-3 pr-7 text-[14px] font-medium text-[#0F172A] focus:outline-none focus:border-[#FF2D1A] cursor-pointer appearance-none"
               >
                 <option>Mr</option>

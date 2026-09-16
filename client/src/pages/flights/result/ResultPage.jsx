@@ -378,6 +378,16 @@ export default function ResultPage() {
               const timeDiff = aDate.getTime() - dDate.getTime();
               dayDiff = Math.max(0, Math.round(timeDiff / (1000 * 3600 * 24)));
             }
+            
+            let formattedDate = depDateStr || "";
+            if (firstLeg.Origin?.DepTime) {
+              const dObj = new Date(firstLeg.Origin.DepTime);
+              if (!isNaN(dObj.getTime())) {
+                const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                formattedDate = `${dObj.getDate()} ${months[dObj.getMonth()]} ${dObj.getFullYear()} · ${days[dObj.getDay()]}`;
+              }
+            }
 
             return {
               id: option.ResultIndex || index,
@@ -388,6 +398,7 @@ export default function ResultPage() {
               arrTime: formatTime(lastLeg.Destination?.ArrTime),
               fromCode: firstLeg.Origin?.AirportCode || firstLeg.Origin?.Airport?.AirportCode || from,
               toCode: lastLeg.Destination?.AirportCode || lastLeg.Destination?.Airport?.AirportCode || to,
+              date: formattedDate,
               duration: formatDuration(totalDurationMin),
               stops: stopsText,
               price: perAdultPriceStr,
@@ -432,7 +443,7 @@ export default function ResultPage() {
     };
 
     fetchFlights();
-  }, [from, to, depDate, retDate, isoneway, adults, children, infants]);
+  }, [from, to, depDate, retDate, isoneway, adults, children, infants, cabinClass]);
 
   // Filter flights based on active selections
   const filteredFlights = flights.filter((flight) => {

@@ -361,7 +361,7 @@ const saveBookingToDatabase = async (bookingDetails) => {
 const getProviderBookingError = (data) => {
   const respObj = data?.responseData?.Response || data?.responseData || null;
   const rawStatus = data?.Status ?? respObj?.Status ?? respObj?.Error?.ErrorCode;
-  const statusMsg = data?.status_message || respObj?.status_message || respObj?.Error?.ErrorMessage;
+  const statusMsg = respObj?.Error?.ErrorMessage || data?.status_message || respObj?.status_message;
   const isError = rawStatus === 7605 || (rawStatus !== undefined && rawStatus !== null && rawStatus !== 0 && rawStatus !== 1);
   return { isError, rawStatus, statusMsg };
 };
@@ -535,6 +535,49 @@ const rebindSegmentedSelections = (existingEntries, freshSegmentedList, noSelect
   }).filter(Boolean);
 };
 
+// Extracts a flat list of all seats from Adivaha's nested SeatDynamic structure
+const flattenSeatDynamic = (seatDynamic) => {
+  const allSeats = [];
+  if (!Array.isArray(seatDynamic)) return allSeats;
+  
+  seatDynamic.forEach(segment => {
+    const segmentSeats = segment?.SegmentSeat;
+    if (Array.isArray(segmentSeats)) {
+      segmentSeats.forEach(segSeat => {
+        const rowSeats = segSeat?.RowSeats;
+        if (Array.isArray(rowSeats)) {
+          rowSeats.forEach(row => {
+            const seats = row?.Seats;
+            if (Array.isArray(seats)) {
+              seats.forEach(seat => {
+                if (seat?.Code) allSeats.push(seat);
+              });
+            }
+          });
+        }
+      });
+    }
+  });
+  return allSeats;
+};
+
+// Re-binds a passenger's SeatDynamic selections to a freshly-fetched SSR array.
+// Unlike Baggage/Meal, Seats are nested in SegmentSeat -> RowSeats -> Seats.
+// We flatten the fresh seats, and for each previously selected seat, we look up
+// the matching seat in the fresh data by Code (and Origin/Destination).
+const rebindSeatDynamic = (existingSeats, freshSeatDynamic) => {
+  if (!Array.isArray(existingSeats) || existingSeats.length === 0) return [];
+  
+  const freshSeatsFlat = flattenSeatDynamic(freshSeatDynamic);
+  if (freshSeatsFlat.length === 0) return existingSeats;
+  
+  return existingSeats.map(oldSeat => {
+    if (!oldSeat?.Code) return oldSeat;
+    const matchingNew = freshSeatsFlat.find(ns => ns.Code === oldSeat.Code && ns.Origin === oldSeat.Origin);
+    return matchingNew || oldSeat;
+  }).filter(Boolean);
+};
+
 // Final authoritative gate, run immediately before EVERY provider
 // ticketing/booking call (book-lcc, book-non-lcc, issue-ticket). Even though
 // the client already calls /validate-booking before opening the payment
@@ -590,8 +633,9 @@ const runFinalRequirementsGate = async (providerPayload) => {
         passengers.forEach((p) => {
           p.Baggage = rebindSegmentedSelections(p.Baggage, ssrResp?.Baggage, "NoBaggage", { forceDefault: true });
           p.MealDynamic = rebindSegmentedSelections(p.MealDynamic, ssrResp?.MealDynamic, "NoMeal", { forceDefault: false });
+          p.SeatDynamic = rebindSeatDynamic(p.SeatDynamic, ssrResp?.SeatDynamic);
         });
-        console.log(`[Requirements Gate] Re-bound Baggage/MealDynamic for ${passengers.length} passenger(s) to the current ResultIndex.`);
+        console.log(`[Requirements Gate] Re-bound Baggage/MealDynamic/SeatDynamic for ${passengers.length} passenger(s) to the current ResultIndex.`);
       } else {
         console.warn("[Requirements Gate] SSR refresh returned a provider error, proceeding with existing Baggage/MealDynamic:", ssrResp?.Error?.ErrorMessage);
       }

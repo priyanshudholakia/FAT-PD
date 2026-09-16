@@ -125,6 +125,17 @@ export default function BookingPage() {
             const priceVal = opt.Fare?.PublishedFare || 0;
 
             const formatTime = (iso) => (iso ? iso.split("T")[1]?.substring(0, 5) || "--:--" : "--:--");
+            
+            let formattedDate = "";
+            if (fLeg.Origin?.DepTime) {
+              const dObj = new Date(fLeg.Origin.DepTime);
+              if (!isNaN(dObj.getTime())) {
+                const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                formattedDate = `${dObj.getDate()} ${months[dObj.getMonth()]} ${dObj.getFullYear()} · ${days[dObj.getDay()]}`;
+              }
+            }
+            
             const restoredFlight = {
               id: activeResIdx,
               logo: `https://images.kiwi.com/airlines/64/${aCode.toUpperCase()}.png`,
@@ -134,6 +145,7 @@ export default function BookingPage() {
               arrTime: formatTime(lLeg.Destination?.ArrTime),
               fromCode: fLeg.Origin?.AirportCode || searchParams.get("from") || "DEL",
               toCode: lLeg.Destination?.AirportCode || searchParams.get("to") || "BOM",
+              date: formattedDate || searchParams.get("depDate") || "15 Dec 2026",
               duration: (() => {
                 const totalMins = fLeg.Duration || 120;
                 const h = Math.floor(totalMins / 60);

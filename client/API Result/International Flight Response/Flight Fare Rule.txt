@@ -1,0 +1,5 @@
+{"status":"200","status_message":"OK","responseData":{"Response":{"Error":{"ErrorCode":0,"ErrorMessage":""},"FareRules":[{"Airline":"SG","DepartureTime":"2026-08-30T07:45:00","Destination":"DXB","FareBasisCode":"USME","FareInclusions":[],"FareRestriction":null,"FareRuleDetail":"The
+FareBasisCode is: USME<br \/> \r\n\r\n Changes and cancellations are permitted as per applicable rules and charges.\r
+<br\ />
+<br\ />
+","FlightId":0,"MiniFareRules":{"Currency":null,"Rules":[]},"NonRefundable":false,"Origin":"DEL","ReturnDate":"0001-01-01T00:00:00"}],"ResponseStatus":1,"TraceId":"f6b14bba-9ed0-4adb-b722-10c6b0239d21","NonRefundable":false}}}

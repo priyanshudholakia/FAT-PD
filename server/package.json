@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "prisma generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.8.0",
+    "axios": "^1.18.1",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.80.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^5.11.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^9.0.3",
+    "pdfmake": "^0.2.23",
+    "pg": "^8.23.0",
+    "pino": "^10.3.1",
+    "razorpay": "^2.9.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "pino-pretty": "^13.1.3",
+    "prisma": "^7.8.0"
+  }
+}

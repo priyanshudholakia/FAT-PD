@@ -1,0 +1,195 @@
+{
+  "FareInclusions": [],
+  "FirstNameFormat": null,
+  "IsBookableIfSeatNotAvailable": false,
+  "IsExclusiveFare": false,
+  "IsFreeMealAvailable": false,
+  "IsHoldAllowedWithSSR": false,
+  "IsHoldMandatoryWithSSR": false,
+  "LastNameFormat": null,
+  "NonStopFirstRanking": 1,
+  "SmartChoiceRanking": 1,
+  "ResultIndex": "OB1[TBO]37QjwXYvMgY4jfMAAnHyjrldVmC0FO7Ai08T1opThaXeC9AL3pIpfPLAlPAWDOjXtabqtfet/+wHp/ub1fNbuEYy4VbrFQ4s8iW6P7+7Jmwb61aqEr661RnbhR4vKaUJ7bB8b+DU+hIMPwMWNvdg9KotCMYNnjfpYZXE0IstoDCR96L2nDPaiBZyYc+kz6IOpfbtcnP3h2D5wxHL+DKL7TbFhQOaK0Q3xep+5ELWlfvwLKaM4HcMUoMQFqam4rbA1tl6yUQaU1P7Ks7J7NqfBN1seiLWBP/SVOMTqTOVi8MGD4NLhNHwT5YKfgUQ9TvcYS2AMes93OQnLI0H+mwHeybCb9YAkqqj2d5O4KcWuUX+iyL7uO3/x0EPAs45ZAn614IPN3X8cz8Mbo0CrHmqsWxaE3RHiNyVHKKDAl+CJn0IkmTtkAAe5fD/fGDeHOcamVaCkVm6+LuMVU8jeaSVDGBXsRt0s7MMIbpVPU6YbVb+9X8YUpv9IT9PaWBKN88IKbBzQh2e0BFolBv4cKONqnJJWeheqw6zKyO2nFVbgMWAF7v+yoYru/wWaTqz4voXE3UCWOdPQyW5toOjArPciOu3Q9XL1q/+fHTPTAXD3KPevYs4gTEa8GGJ8P1DDgEcxZi9ufC1MmQjIM1DxRRRxK4nhbMpz/fZz02OoHkxw7SlVeZOhReCW49/vbH/gvi2gUe+IfitT3D8ZNfsDOHyRbUvKxZAHhSjNKzlUnchxamtEM7MEU6tynE9hLKHQhrlPVVluVXUijquci5lCURb86rKytqfwt6jq+GwjHrbX1oBkJjDxMDtsFJcbigmynKU+RrnixR38rs/PG/UIDgRt3al82kGzNR0zJJMT0YpBz9bAWHkH13TWoWWL9mzMbmGBfCHub8ky2m2LHq4jtuntyz8A/j41Wm6XvHDmQ64tZABRsZJ11V5BwUI+9zG75OqEwdAhuTdBRO54wz4s7COVjUckdiM6IHctK/hFamNP96Ux6owN7YiXanRsLTxAUKP",
+  "Source": 6,
+  "IsLCC": true,
+  "IsRefundable": true,
+  "IsPanRequiredAtBook": false,
+  "IsPanRequiredAtTicket": false,
+  "IsPassportRequiredAtBook": false,
+  "IsPassportRequiredAtTicket": false,
+  "GSTAllowed": true,
+  "IsCouponAppilcable": true,
+  "IsGSTMandatory": false,
+  "AirlineRemark": "6E main.",
+  "IsPassportFullDetailRequiredAtBook": false,
+  "ResultFareType": "RegularFare",
+  "Fare": {
+    "CFARAmount": 0,
+    "DCFARAmount": 0,
+    "ServiceFeeDisplayType": 0,
+    "Currency": "INR",
+    "BaseFare": 1000,
+    "Tax": 1383,
+    "TaxBreakup": [
+      {
+        "key": "K3",
+        "value": 0
+      }
+    ],
+    "YQTax": 0,
+    "AdditionalTxnFeeOfrd": 0,
+    "AdditionalTxnFeePub": 0,
+    "PGCharge": 0,
+    "OtherCharges": 0,
+    "ChargeBU": [
+      {
+        "key": "TBOMARKUP",
+        "value": 0
+      },
+      {
+        "key": "GLOBALPROCUREMENTCHARGE",
+        "value": 0
+      },
+      {
+        "key": "CONVENIENCECHARGE",
+        "value": 0
+      },
+      {
+        "key": "OTHERCHARGE",
+        "value": 0
+      }
+    ],
+    "Discount": 0,
+    "PublishedFare": 2383,
+    "CommissionEarned": 21.3,
+    "PLBEarned": 0,
+    "IncentiveEarned": 0,
+    "OfferedFare": 2361.7,
+    "TdsOnCommission": 8.52,
+    "TdsOnPLB": 0,
+    "TdsOnIncentive": 0,
+    "ServiceFee": 0,
+    "TotalBaggageCharges": 0,
+    "TotalMealCharges": 0,
+    "TotalSeatCharges": 0,
+    "TotalSpecialServiceCharges": 0
+  },
+  "FareBreakdown": [
+    {
+      "CFARAmount": 0,
+      "DCFARAmount": 0,
+      "SegmentDetails": [
+        {
+          "CabinBaggage": {
+            "FreeText": "7 KG",
+            "Unit": "KG",
+            "Value": "7"
+          },
+          "CheckedInBaggage": {
+            "FreeText": "15 KG",
+            "Unit": "KG",
+            "Value": "15"
+          },
+          "FlightInfoIndex": "1"
+        }
+      ],
+      "Currency": "INR",
+      "PassengerType": 1,
+      "PassengerCount": 1,
+      "BaseFare": 1000,
+      "Tax": 1383,
+      "TransactionFee": 0,
+      "YQTax": 0,
+      "TaxBreakUp": null,
+      "AdditionalTxnFeePub": 0,
+      "PGCharge": 0,
+      "AdditionalTxnFeeOfrd": 0,
+      "SupplierReissueCharges": 0
+    }
+  ],
+  "Segments": [
+    [
+      {
+        "Baggage": "15 KG",
+        "CabinBaggage": "7 KG",
+        "CabinClass": 2,
+        "SupplierFareClass": "Sale",
+        "TripIndicator": 1,
+        "SegmentIndicator": 1,
+        "Airline": {
+          "AirlineCode": "6E",
+          "AirlineName": "Indigo",
+          "FlightNumber": "873",
+          "FareClass": "SS",
+          "OperatingCarrier": ""
+        },
+        "NoOfSeatAvailable": 7,
+        "Origin": {
+          "Airport": {
+            "AirportCode": "DEL",
+            "AirportName": "Indira Gandhi Airport",
+            "Terminal": "1",
+            "CityCode": "DEL",
+            "CityName": "Delhi",
+            "CountryCode": "IN",
+            "CountryName": "India"
+          },
+          "DepTime": "2026-08-30T08:20:00"
+        },
+        "Destination": {
+          "Airport": {
+            "AirportCode": "BLR",
+            "AirportName": "Bengaluru Intl",
+            "Terminal": "1",
+            "CityCode": "BLR",
+            "CityName": "Bangalore",
+            "CountryCode": "IN",
+            "CountryName": "India"
+          },
+          "ArrTime": "2026-08-30T11:10:00"
+        },
+        "Duration": 170,
+        "GroundTime": 0,
+        "Mile": 0,
+        "StopOver": false,
+        "FlightInfoIndex": "1",
+        "StopPoint": "",
+        "StopPointArrivalTime": "0001-01-01T00:00:00",
+        "StopPointDepartureTime": "0001-01-01T00:00:00",
+        "Craft": "321",
+        "Remark": null,
+        "IsETicketEligible": true,
+        "FlightStatus": "Confirmed",
+        "Status": "",
+        "FareClassification": {
+          "Color": "Turquoise",
+          "Type": "Sale"
+        }
+      }
+    ]
+  ],
+  "LastTicketDate": null,
+  "TicketAdvisory": null,
+  "FareRules": [
+    {
+      "Origin": "DEL",
+      "Destination": "BLR",
+      "Airline": "6E",
+      "FareBasisCode": "S0IP",
+      "FareRuleDetail": "",
+      "FareRestriction": "",
+      "FareFamilyCode": "",
+      "FareRuleIndex": "",
+      "MiniFareRules": {
+        "Currency": null,
+        "Rules": []
+      }
+    }
+  ],
+  "AirlineCode": "6E",
+  "ValidatingAirline": "6E",
+  "FareClassification": {
+    "Color": "Turquoise",
+    "Type": "Sale"
+  }
+}
